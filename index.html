@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="app-title">
+                <img src="data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2L2 7L12 12L22 7L12 2Z' stroke='%236366F1' stroke-width='2'/%3E%3C/svg%3E"
+                    alt="logo">
+                LocalWeather
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for cities" id="citySearch">
+                <button class="add-button">+</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="current-weather">
+                <h1 class="city-name">Madrid</h1>
+                <div class="temperature">
+                    <span class="current-temp">16°</span>
+                    <span class="min-temp">-1°</span>
+                    <div class="weather-icon">⛅</div>
+                </div>
+            </div>
+
+            <section class="hourly-forecast">
+                <h2>TODAY'S FORECAST</h2>
+                <div class="forecast-scroll" id="hourlyForecast">
+                    <!-- Hourly forecast items will be inserted here -->
+                </div>
+            </section>
+
+            <section class="weather-details">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Sunrise</span>
+                        <span class="detail-value" id="sunrise">8:18</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Sunset</span>
+                        <span class="detail-value" id="sunset">18:40</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Chance of rain</span>
+                        <span class="detail-value" id="rainChance">21%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Pressure</span>
+                        <span class="detail-value" id="pressure">1023 mb</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wind</span>
+                        <span class="detail-value" id="wind">8 km/h</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">UV index</span>
+                        <span class="detail-value" id="uv">2 of 10</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Feels like</span>
+                        <span class="detail-value" id="feelsLike">12°</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Visibility</span>
+                        <span class="detail-value" id="visibility">14 km</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+
+</html>
